@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Event = ({ match }) => {
   const [event, setEvent] = useState([]);
-  const [data, setData] = useState("");
+  
   const getEvent = async () => {
     try {
       const res = await fetch(`/event/${match.params.id}`, {
@@ -95,7 +95,7 @@ const Event = ({ match }) => {
           </tr>
         </tbody>
       </table>
-      <p> {data}</p>
+      
 
       <Link to="/Home">
         <button className="btn btn-primary">Home</button>
